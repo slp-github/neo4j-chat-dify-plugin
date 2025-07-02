@@ -1,0 +1,3 @@
+dify_plugin~=0.0.1b60
+neo4j==5.28.1
+langchain-neo4j==0.3.0

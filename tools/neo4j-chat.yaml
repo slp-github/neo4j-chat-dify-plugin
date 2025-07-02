@@ -1,0 +1,96 @@
+identity:
+  name: neo4j-chat
+  author: slp
+  label:
+    en_US: neo4j-chat
+    zh_Hans: neo4j-chat
+    pt_BR: neo4j-chat
+description:
+  human:
+    en_US: chat to neo4j
+    zh_Hans: chat to neo4j
+    pt_BR: chat to neo4j
+  llm: chat to neo4j
+parameters:
+  - name: model
+    type: model-selector
+    scope: llm
+    required: true
+    label:
+      en_US: Model
+      zh_Hans: 模型
+      pt_BR: Model
+    human_description:
+      en_US: Please select a model
+      zh_Hans: 请选择一个模型
+      pt_BR: Please select a model
+    llm_description: Please select a model
+    form: form
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: 查询语句
+    human_description:
+      en_US: Please input your query string
+      zh_Hans: 请输入你的查询语句
+      pt_BR: Please input your query string
+    llm_description: Please input your query string
+    form: llm
+  - name: prompt
+    type: string
+    required: false
+    label:
+      en_US: Prompt
+      zh_Hans: 提示词
+      pt_BR: Prompt
+    human_description:
+      en_US: Prompts for generating Cypher query language
+      zh_Hans: 用于生成Cypher 查询语言的提示词
+      pt_BR: Prompts for generating Cypher query language
+    llm_description: Prompts for generating Cypher query language
+    form: llm
+  - name: neo4j_uri
+    type: string
+    required: false
+    label:
+      en_US: NEO4J_URI
+      zh_Hans: NEO4J_URI
+      pt_BR: NEO4J_URI
+    human_description:
+      en_US: Please input your NEO4J_URI
+      zh_Hans: 请输入你的 NEO4J_URI
+      pt_BR: Please input your NEO4J_URI
+    llm_description: Please input your NEO4J_URI
+    form: llm
+  - name: neo4j_user
+    type: string
+    required: false
+    label:
+      en_US: NEO4J_USER
+      zh_Hans: NEO4J_USER
+      pt_BR: NEO4J_USER
+    human_description:
+      en_US: Please input your NEO4J_USER
+      zh_Hans: 请输入你的 NEO4J_USER
+      pt_BR: Please input your NEO4J_USER
+    llm_description: Please input your NEO4J_USER
+    form: llm
+  - name: neo4j_password
+    type: secret-input
+    required: false
+    label:
+      en_US: NEO4J_PASSWORD
+      zh_Hans: NEO4J_PASSWORD
+      pt_BR: NEO4J_PASSWORD
+    human_description:
+      en_US: Please input your NEO4J_PASSWORD
+      zh_Hans: 请输入你的 NEO4J_PASSWORD
+      pt_BR: Please input your NEO4J_PASSWORD
+    llm_description: Please input your NEO4J_PASSWORD
+    form: llm
+extra:
+  python:
+    source: tools/neo4j-chat.py

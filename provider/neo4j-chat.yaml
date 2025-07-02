@@ -1,0 +1,45 @@
+identity:
+  author: slp
+  name: neo4j-chat
+  label:
+    en_US: neo4j-chat
+    zh_Hans: neo4j-chat
+    pt_BR: neo4j-chat
+  description:
+    en_US: chat to neo4j
+    zh_Hans: chat to neo4j
+    pt_BR: chat to neo4j
+  icon: icon.svg
+credentials_for_provider: #添加 credentials_for_provider 字段
+  neo4j_uri:
+    type: text-input
+    required: true
+    label:
+      en_US: NEO4J_URI
+      zh_Hans: NEO4J_URI
+    placeholder:
+      en_US: Please input your NEO4J_URI
+      zh_Hans: 请输入你的 NEO4J_URI
+  neo4j_user:
+    type: text-input
+    required: true
+    label:
+      en_US: NEO4J_USER
+      zh_Hans: NEO4J_USER
+    placeholder:
+      en_US: Please input your NEO4J_USER
+      zh_Hans: 请输入你的 NEO4J_USER
+  neo4j_password:
+    type: secret-input
+    required: true
+    label:
+      en_US: NEO4J_PASSWORD
+      zh_Hans: NEO4J_PASSWORD
+    placeholder:
+      en_US: Please input your NEO4J_PASSWORD
+      zh_Hans: 请输入你的 NEO4J_PASSWORD
+tools:
+  - tools/neo4j-chat.yaml
+extra:
+  python:
+    source: provider/neo4j-chat.py
