@@ -4,8 +4,8 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.model.message import SystemPromptMessage, UserPromptMessage
 from dify_plugin.entities.tool import ToolInvokeMessage
-from langchain_neo4j import Neo4jGraph
 
+from libs.neo4j_graph import Neo4jGraph
 from tools.prompt import (
     ANSWER_SYSTEM_PROMPT_TEMPLATE,
     NL_CQL_SYSTEM_PROMPT_TEMPLATE,

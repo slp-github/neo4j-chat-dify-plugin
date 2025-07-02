@@ -2,7 +2,8 @@ from typing import Any
 
 from dify_plugin import ToolProvider
 from dify_plugin.errors.tool import ToolProviderCredentialValidationError
-from langchain_community.graphs import Neo4jGraph
+
+from libs.neo4j_graph import Neo4jGraph
 
 
 class Neo4jChatProvider(ToolProvider):
